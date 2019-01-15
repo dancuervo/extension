@@ -1,0 +1,17 @@
+{
+	"manifest_version": 2,
+	"name": "WebTech Appointments - Daniel Cenoz",
+	"description": "WebTech Appointments",
+	"version": "0.1",
+	"icons": {
+		"128": "images.png"
+	},
+	"browser_action" : {
+		"default_icon":"images.png",
+		"default_popup":"popup.html"
+	},
+	"permissions": [
+		"unlimitedStorage",
+		"notifications"
+	]
+}
