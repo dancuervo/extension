@@ -2,16 +2,37 @@
 	"manifest_version": 2,
 	"name": "WebTech Appointments - Daniel Cenoz",
 	"description": "WebTech Appointments",
-	"version": "0.1",
+	"version": "0.2",
 	"icons": {
-		"128": "images.png"
+		"128": "images/images.png"
 	},
 	"browser_action" : {
-		"default_icon":"images.png",
+		"default_icon":"images/images.png",
 		"default_popup":"popup.html"
 	},
+
+	"web_accessible_resources": [
+		"images/vampeta.jpg",
+		"style/double-rainbow.css",
+		"script/double-rainbow.js",
+		"script.js",
+		"templates/*"
+	  ],
+
+	  "content_scripts": [
+		{
+		  "matches": ["http://*/", "https://*/"],
+		  "exclude_matches": ["<all_urls>"],
+		  "js": ["contentScript.js"]
+		} 
+	], 
+
 	"permissions": [
+		"activeTab",
+		"http://*/",
+		"https://*/",
 		"unlimitedStorage",
-		"notifications"
+		"notifications",
+		"<all_urls>"
 	]
 }
